@@ -1,0 +1,24 @@
+[[manager.prepend_keymap]]
+on   = "<enter>"
+run  = "plugin --sync smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[manager.prepend_keymap]]
+on = [ "m", "a"]
+run = "plugin bookmarks --args=save"
+desc = "Save current position as a bookmark"
+
+[[manager.prepend_keymap]]
+on = [ "m", "s" ]
+run = "plugin bookmarks --args=jump"
+desc = "Jump to a bookmark"
+
+[[manager.prepend_keymap]]
+on = [ "b", "d" ]
+run = "plugin bookmarks --args=delete"
+desc = "Delete a bookmark"
+
+[[manager.prepend_keymap]]
+on = [ "b", "D" ]
+run = "plugin bookmarks --args=delete_all"
+desc = "Delete all bookmarks"

@@ -1,0 +1,144 @@
+@define-color bg-darker #0F0F0F;
+@define-color bg #18181B;
+@define-color bg-alt #20212C;
+@define-color fg #A0A0AB;
+@define-color fg-alt #5D5E72;
+
+* {
+  border: none;
+  min-height: 24px;
+  font-family: Ubuntu Nerd Font, Cantarell, Symbols Nerd Font;
+  font-size: 14px;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+#workspaces button {
+    padding: 0 8px;
+    color: @fg-alt;
+    margin: 4px;
+    transition: color 200ms ease-in-out;
+}
+
+
+#workspaces button:hover {
+    color: @fg;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: 3px;
+    background-color: @bg-alt;
+}
+
+#workspaces button.selected {
+    color: @fg;
+}
+
+#workspaces button.active {
+    color: @fg;
+    background-color: @bg-alt;
+    border-radius: 3px;
+}
+
+#workspaces button.urgent {
+    color: @fg-alt;
+    background-color: @fg-alt;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-pacman,
+#custom-power,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 5px;
+    color: @fg;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+
+}
+
+/* If workspaces is the leftmost module, reduce left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 2px;
+}
+
+#custom-power {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+#clock {
+  margin-right: 5px;
+}
+
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
+/* vim: ft=sass */

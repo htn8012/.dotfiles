@@ -77,7 +77,7 @@ sudo pacman -S gnome-themes-extra papirus-icon-theme
 ### ssh git
 ```sh
 ls -al ~/.ssh
-ssh-keygen -t ed25519 -C "" #username
+ssh-keygen -t ed25519 -C "" ##email
 cat ~/.ssh/id_ed25519.pub | wl-copy
 # [SSH keys](https://github.com/settings/keys)
 ```

@@ -69,7 +69,7 @@ tmux source ~/.tmux.conf
 ```sh
 sudo pacman -S rofi-wayland hyprpicker hyprlock hypridle waybar dunst nautilus okular loupe
 yay -S waypaper-git hyprshot
-sudo pacman -S xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland
+sudo pacman -S xdg-desktop-portal-hyprland polkit-kde-agent qt5-wayland qt6-wayland
 sudo pacman -S qt6ct kvantum nwg-look dconf-editor
 sudo pacman -S gnome-themes-extra papirus-icon-theme
 ```

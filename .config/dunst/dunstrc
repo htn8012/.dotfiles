@@ -1,7 +1,7 @@
-# bg #18181B;
-# bg-alt #20212C;
-# fg #A0A0AB;
-# fg-alt #5D5E72;
+ # bg: #1E1E1E;
+ # bg-alt: #303030;
+ # fg: #A0A0AB;
+ # fg-alt: #5D5E72;
 
 [global]
     monitor = 0
@@ -11,20 +11,20 @@
     offset = 32x32
 
     progress_bar = true
-    progress_bar_height = 10
+    progress_bar_height = 6
     progress_bar_frame_width = 1
     progress_bar_min_width = 150
     progress_bar_max_width = 400
-    progress_bar_corner_radius = 5
+    progress_bar_corner_radius = 0
 
     indicate_hidden = yes
     shrink = no
-		separator_height = 2
-    separator_color = "#5D5E72"
+		separator_height = 1
+    separator_color = "#5D5E72" #fg-alt
     padding = 15
     horizontal_padding = 15
-    frame_width = 2
-    corner_radius = 10
+    frame_width = 1
+    corner_radius = 0
     sort = yes
     idle_threshold = 120
 
@@ -61,31 +61,31 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#18181B"
-    foreground = "#A0A0AB"
-    highlight = "#A0A0AB"
-    frame_color = "#5D5E72"
+    background = "#1E1E1E" #bg
+    foreground = "#A0A0AB" #fg
+    highlight = "#A0A0AB" #fg
+    frame_color = "#5D5E72" #fg-alt
     timeout = 5
 
 [urgency_normal]
-    background = "#18181B"
-    foreground = "#A0A0AB"
-    highlight = "#A0A0AB"
-    frame_color = "#5D5E72"
+    background = "#1E1E1E" #bg
+    foreground = "#A0A0AB" #fg
+    highlight = "#A0A0AB" #fg
+    frame_color = "#5D5E72" #fg-alt
     timeout = 5
 
 [urgency_critical]
-    background = "#181825"
-    foreground = "#A0A0AB"
+    background = "#1E1E1E" #bg
+    foreground = "#A0A0AB" #fg
     frame_color = "#eba0ac"
     timeout = 1000
 
 [volume]
     appname = "Volume"
-    highlight = "#5D5E72"
+    highlight = "#5D5E72" #fg-alt
 
 [backlight]
     appname = "Backlight"
-    highlight = "#5D5E72"
+    highlight = "#5D5E72" #fg-alt
 
 # vim: ft=cfg

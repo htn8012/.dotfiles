@@ -82,10 +82,10 @@ return {
 			preselect = "item",
 			window = {
 				completion = cmp.config.window.bordered({
-					border = "rounded",
+					border = "single",
 				}),
 				documentation = cmp.config.window.bordered({
-					border = "rounded",
+					border = "single",
 				}),
 			},
 			experimental = {

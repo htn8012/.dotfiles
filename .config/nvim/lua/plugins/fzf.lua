@@ -50,13 +50,14 @@ return {
 			},
 			winopts = {
 				-- split = 'botright new',
-				border = "rounded",
+				border = "single",
 				backdrop = 100,
-				-- preview = {
-				--   layout = "flex",
-				--   flip_columns = 120,
-				--   scrollbar = "float",
-				-- },
+				preview = {
+					border = "single",
+					layout = "flex",
+					flip_columns = 120,
+					scrollbar = "float",
+				},
 			},
 			files = {
 				cwd_prompt = false,

@@ -1,0 +1,122 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "spacing": 0,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "custom/screenshot",
+    "custom/clipboard",
+    "custom/power",
+    "clock"
+  ],
+  "hyprland/window": {
+    "format": "{title}",
+    "separate-outputs": true
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2
+      ]
+    }
+  },
+  "tray": {
+    "icon-size": 13,
+    "spacing": 13
+  },
+  "clock": {
+    "tooltip-format": "{:%A, %B %d, %Y}",
+    "format": "{:%I:%M %p}"
+    // "format": "{:%H:%M}"
+  },
+  "battery": {
+    "states": {
+      "warning": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄  {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "network": {
+    "format-wifi": "󰤨",
+    "format-disconnected": "󰤭",
+    "tooltip-format": "Connected to {essid}",
+    "on-click": "hyprctl dispatch exec '[float]' '$TERMINAL -e nmtui'"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}% {format_source}",
+    "format-muted": "  {format_source}",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
+    "format-bluetooth-muted": "  {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "custom/clipboard": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "killall rofi & rofi-clipboard",
+    "interval": 86400
+  },
+  "custom/screenshot": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "hyprshot -m output",
+    "on-click-right": "hyprshot -m window"
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "sleep 0.15 && rofi-power-menu"
+  }
+}

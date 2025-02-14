@@ -1,6 +1,11 @@
 configuration {
   font: "Ubuntu Nerd Font 11";
-
+  drun {
+    display-name: "";
+  }
+  window {
+    display-name: "";
+  }
   timeout {
     delay: 10;
     action: "kb-cancel";
@@ -13,8 +18,8 @@ configuration {
   padding: 0;
   spacing: 0;
 
-  bg: #18181B;
-  bg-alt: #20212C;
+  bg: #1E1E1E;
+  bg-alt: #303030;
   fg: #A0A0AB;
   fg-alt: #5D5E72;
 
@@ -24,8 +29,8 @@ configuration {
 
 window {
   border: 1px;
-  border-radius: 4px;
-  border-color: @fg-alt;
+  border-radius: 0;
+  border-color: @bg-alt;
   padding: 6px;
   transparency: "real";
 }
@@ -35,29 +40,26 @@ mainbox {
 }
 
 inputbar {
-  children: [entry];
-}
-
-entry {
-  padding: 10px;
+  children: [prompt, entry];
 }
 
 listview {
-  lines: 10;
+  lines: 8;
   scrollbar: true;
 }
 
 scrollbar {
   background-color: @bg-alt;
-  handle-color: @fg;
-  margin: 0 0 0 6px;
+  handle-color: @fg-alt;
+  handle-width: 8px ;
+  margin: 0 0 0 8px;
 }
 
-element-text {
+element-text, entry {
   padding: 10px;
 }
 
-element-icon {
+element-icon, prompt {
   padding: 10px 0 10px 10px;
 }
 

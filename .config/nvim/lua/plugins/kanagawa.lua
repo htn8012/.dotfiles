@@ -59,7 +59,7 @@ return {
 		end,
 		theme = "wave",
 		background = {
-			dark = "wave", -- "dragon" | "wave"
+			dark = "dragon", -- "dragon" | "wave"
 			light = "lotus",
 		},
 	},

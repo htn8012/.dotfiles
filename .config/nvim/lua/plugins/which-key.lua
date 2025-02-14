@@ -4,7 +4,7 @@ return {
 	opts = {
 		preset = "helix",
 		win = {
-			border = "rounded",
+			border = "single",
 			title = false,
 		},
 	},

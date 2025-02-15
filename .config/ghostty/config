@@ -1,4 +1,25 @@
-theme = "Kanagawa Dragon"
+palette = 0=#0f0b05
+palette = 1=#6E2748
+palette = 2=#685C59
+palette = 3=#8A566D
+palette = 4=#B95A98
+palette = 5=#986E8E
+palette = 6=#807A82
+palette = 7=#c3c2c0
+palette = 8=#696055
+palette = 9=#6E2748
+palette = 10=#685C59
+palette = 11=#8A566D
+palette = 12=#B95A98
+palette = 13=#986E8E
+palette = 14=#807A82
+palette = 15=#c3c2c0
+background = #0f0b05
+foreground = #c3c2c0
+cursor-color = #c3c2c0
+selection-background = #6E2748
+selection-foreground = #c3c2c0
+
 mouse-hide-while-typing = true
 window-padding-x = 0
 window-padding-y = 0

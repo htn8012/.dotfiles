@@ -57,12 +57,14 @@ return {
 			mappings = {
 				["l"] = "open",
 				["h"] = "close_node",
+				["f"] = "none",
 				["o"] = "none",
 				["Y"] = {
 					function(state)
 						local node = state.tree:get_node()
 						local path = node:get_id()
 						vim.fn.setreg("+", path, "c")
+						print("Copied path:", path)
 					end,
 					desc = "Copy Path to Clipboard",
 				},

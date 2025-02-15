@@ -1,18 +1,20 @@
-@define-color bg #070707;
-@define-color bg-alt #141414;
-@define-color bg-alt2 #212121;
-@define-color fg #AFAFAF;
-@define-color fg-alt #686868;
+@import "colors.css";
+
+@define-color fg @foreground;
+@define-color bg @background;
+@define-color fg-alt @color14;
+@define-color bg-alt @color1;
 
 * {
   border: none;
   min-height: 20px;
-  font-weight: 400;
+  font-weight: 500;
   font-family:
+    Cantarell,
     Ubuntu Nerd Font,
     HackGen,
-    Cantarell;
-  font-size: 13px;
+    Noto Color Emoji;
+  font-size: 14px;
 }
 
 window#waybar {
@@ -46,30 +48,30 @@ button {
 
 #workspaces button {
   padding: 0 6px;
-  color: @fg-alt;
-  transition: color 200ms ease-in-out;
+  color: @fg;
 }
 
 #workspaces button:hover {
-  color: @fg;
   box-shadow: inherit;
   text-shadow: inherit;
-  background-color: @bg-alt;
+  /* color: @bg; */
+  color: @fg;
+  background-color: alpha(@bg-alt, 0.4);
 }
 
 #workspaces button.selected {
   color: @fg;
-  background-color: @bg-alt2;
+  background-color: @bg-alt;
 }
 
 #workspaces button.active {
   color: @fg;
-  background-color: @bg-alt2;
+  background-color: @bg-alt;
 }
 
 #workspaces button.urgent {
-  color: @bg;
-  background-color: @fg-alt;
+  color: @fg;
+  background-color: alpha(@bg-alt, 0.8);
 }
 
 #clock,
@@ -90,9 +92,10 @@ button {
 #scratchpad,
 #custom-clipboard,
 #custom-screenshot,
+#custom-colorpicker,
 #mpd {
   padding: 0 5px;
-  color: @fg-alt;
+  color: @fg;
   border-radius: 0px;
 }
 
@@ -114,11 +117,12 @@ button {
 #scratchpad:hover,
 #custom-clipboard:hover,
 #custom-screenshot:hover,
+#custom-colorpicker:hover,
 #mpd:hover {
-  background-color: @bg-alt;
   color: @fg;
+  background-color: alpha(@bg-alt, 0.4);
 }
 
 #window {
-  padding: 0 5px;
+  color: alpha(@fg-alt, 0.8);
 }

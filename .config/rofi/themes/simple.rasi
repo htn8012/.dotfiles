@@ -1,3 +1,5 @@
+@import "./colors.rasi"
+
 configuration {
   font: "Ubuntu Nerd Font 11";
   drun {
@@ -18,10 +20,10 @@ configuration {
   padding: 0;
   spacing: 0;
 
-  bg: #1E1E1E;
-  bg-alt: #303030;
-  fg: #A0A0AB;
-  fg-alt: #5D5E72;
+  fg: @foreground;
+  bg: @background;
+  fg-alt: @foreground-alt;
+  bg-alt: @background-alt;
 
   background-color: @bg;
   text-color: @fg-alt;
@@ -30,7 +32,7 @@ configuration {
 window {
   border: 1px;
   border-radius: 0;
-  border-color: @bg-alt;
+  border-color: @gray;
   padding: 6px;
   transparency: "real";
 }
@@ -49,8 +51,8 @@ listview {
 }
 
 scrollbar {
-  background-color: @bg-alt;
-  handle-color: @fg-alt;
+  background-color: @bg;
+  handle-color: @gray;
   handle-width: 8px ;
   margin: 0 0 0 8px;
 }
@@ -65,5 +67,5 @@ element-icon, prompt {
 
 element-text selected, element-icon selected {
   background-color: @bg-alt;
-  text-color: @fg;
+  text-color: @bg;
 }

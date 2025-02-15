@@ -12,10 +12,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 
-# adds ~/.local/bin and subfolders to $PATH
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # set the localization
 export LC_ALL=en_US.UTF-8

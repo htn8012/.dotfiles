@@ -1,0 +1,7 @@
+* {{
+    background:     {background};
+    foreground:     {foreground};
+    foreground-alt: {color14};
+    background-alt: {color1};
+    gray: {color8};
+}}

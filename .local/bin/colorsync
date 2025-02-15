@@ -1,0 +1,16 @@
+#!/bin/sh
+
+cat ~/.cache/wal/colors-rofi.rasi >~/.config/rofi/themes/colors.rasi
+cat ~/.cache/wal/dunstrc >~/.config/dunst/dunstrc
+cat ~/.cache/wal/colors-hyprland.conf >~/.config/hypr/modules/colors.conf
+cat ~/.cache/wal/colors-waybar.css >~/.config/waybar/colors.css
+cat ~/.cache/wal/ghostty >~/.config/ghostty/config
+
+pkill waybar
+waybar &
+pkill dunst
+dunst &
+
+hyprctl reload
+
+notify-send "colors is synced"

@@ -85,6 +85,7 @@ function M.config()
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })
 
+	---@diagnostic disable-next-line: missing-fields
 	mason_lspconfig.setup({
 		ensure_installed = {
 			"bashls",

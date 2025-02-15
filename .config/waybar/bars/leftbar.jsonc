@@ -1,0 +1,149 @@
+{
+  "layer": "top",
+  "position": "left",
+  "reload_style_on_change": true,
+  "spacing": 0,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "custom/screenshot",
+    "custom/clipboard",
+    "custom/colorpicker",
+    "custom/power",
+    "clock"
+  ],
+  "hyprland/window": {
+    // "format": "{title}",
+    "format": "{class}\t{title}",
+    "icon": false,
+    "max-length": 300,
+    "rotate": 90,
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "disable-scroll": true,
+    "all-outputs": true
+  },
+  "tray": {
+    "icon-size": 13,
+    "spacing": 2
+  },
+  "clock": {
+    "format": "{:%H\n%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "today": "<span color='#a6e3a1'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "battery": {
+    "rotate": 270,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "<b>{icon} </b>",
+    "format-full": "<span color='#82A55F'><b>{icon}</b></span>",
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ],
+    "tooltip-format": "{timeTo} {capacity} % | {power} W"
+  },
+  "network": {
+    "format-wifi": "󰤨",
+    "format-disconnected": "󰤭",
+    "tooltip-format": "Connected to {essid}",
+    "on-click": "hyprctl dispatch exec '[float]' '$TERMINAL -e nmtui'"
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
+    "tooltip-format": "{volume}% {icon} | {desc}",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "headphones": "󰋌",
+      "handsfree": "󰋌",
+      "headset": "󰋌",
+      "phone": "",
+      "portable": "",
+      "car": " ",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "on-click": "volume mute",
+    "on-click-right": "pavucontrol"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "on-scroll-down": "brightnessctl s 5%-",
+    "on-scroll-up": "brightnessctl s +5%",
+    "tooltip": true,
+    "tooltip-format": "Brightness: {percent}% ",
+    "smooth-scrolling-threshold": 1
+  },
+  "custom/clipboard": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "killall rofi & rofi-clipboard",
+    "interval": 86400
+  },
+  "custom/screenshot": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "hyprshot -m output",
+    "on-click-right": "hyprshot -m window"
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "sleep 0.15 && rofi-power-menu"
+  },
+  "custom/colorpicker": {
+    "format": "󰈊",
+    "tooltip": false,
+    "on-click": "sleep 0.15 && hyprpicker -a",
+    "on-click-right": "sleep 0.15 && hyprpicker --format=rgb -a",
+    "signal": 1
+  }
+}

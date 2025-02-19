@@ -2,9 +2,13 @@ return {
 	"williamboman/mason.nvim",
 	build = ":MasonInstallAll",
 	config = function()
+		---@diagnostic disable-next-line: missing-fields
 		require("mason").setup({
 			ui = {
 				border = "single",
+				backdrop = 100,
+				width = 0.8,
+				height = 0.8,
 				icons = {
 					package_installed = "✓",
 					package_pending = "➜",

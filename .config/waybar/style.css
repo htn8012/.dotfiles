@@ -10,11 +10,12 @@
   min-height: 20px;
   font-weight: 500;
   font-family:
-    Cantarell,
     Ubuntu Nerd Font,
+    Cantarell,
     HackGen,
     Noto Color Emoji;
   font-size: 14px;
+  font-size: 13px;
 }
 
 window#waybar {
@@ -35,43 +36,9 @@ window#waybar.termite {
 
 window#waybar.chromium {
   background-color: #000000;
-  border: none;
-}
-
-button {
-  /* Use box-shadow instead of border so the text isn't offset */
-  box-shadow: inset 0 -3px transparent;
-  /* Avoid rounded borders under each button name */
-  border: none;
-  border-radius: 0px;
-}
-
-#workspaces button {
-  padding: 0 6px;
-  color: @fg;
-}
-
-#workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
-  /* color: @bg; */
-  color: @fg;
-  background-color: alpha(@bg-alt, 0.4);
-}
-
-#workspaces button.selected {
-  color: @fg;
-  background-color: @bg-alt;
-}
-
-#workspaces button.active {
-  color: @fg;
-  background-color: @bg-alt;
-}
-
-#workspaces button.urgent {
-  color: @fg;
-  background-color: alpha(@bg-alt, 0.8);
+  /* background-color: transparent; */
+  /* transition-property: background-color; */
+  /* transition-duration: 0.5s; */
 }
 
 #clock,
@@ -94,8 +61,8 @@ button {
 #custom-screenshot,
 #custom-colorpicker,
 #mpd {
-  padding: 0 5px;
-  color: @fg;
+  padding: 0px 6px;
+  color: alpha(@fg, 0.7);
   border-radius: 0px;
 }
 
@@ -119,10 +86,48 @@ button {
 #custom-screenshot:hover,
 #custom-colorpicker:hover,
 #mpd:hover {
-  color: @fg;
-  background-color: alpha(@bg-alt, 0.4);
+  color: alpha(@fg, 0.7);
+  background-color: alpha(@bg-alt, 0.5);
 }
 
 #window {
-  color: alpha(@fg-alt, 0.8);
+  color: alpha(@fg, 0.7);
+}
+
+#clock {
+  padding: 0px 6px;
+  padding: 4px 0;
+}
+
+#workspaces {
+  padding: 0;
+}
+
+button {
+  /* box-shadow: inset 0 -3px transparent; */
+  border: none;
+  border-radius: 0px;
+}
+
+#workspaces button {
+  /* transition-property: background-color; */
+  /* transition-duration: 0.3s; */
+  /* background: transparent; */
+  padding: 0px 6px;
+  color: alpha(@fg, 0.7);
+}
+
+#workspaces button:hover {
+  background: alpha(@bg-alt, 0.7);
+}
+
+#workspaces button.urgent {
+  font-weight: bold;
+  color: @bg;
+  background: alpha(@fg, 0.7);
+}
+
+#workspaces button.active {
+  color: @fg;
+  background: alpha(@bg-alt, 0.3);
 }

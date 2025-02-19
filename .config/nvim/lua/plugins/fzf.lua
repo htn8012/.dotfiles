@@ -19,7 +19,7 @@ return {
 			fzf_colors = {
 				true,
 				["fg"] = { "fg", "CursorLine" },
-				["fg+"] = { "fg", "Normal" },
+				["fg+"] = { "fg", "Normal", "underline" },
 				["bg"] = { "bg", "Normal" },
 				["bg+"] = { "bg", { "CursorLine", "Normal" } },
 				["gutter"] = "-1",
@@ -55,7 +55,6 @@ return {
 				preview = {
 					border = "single",
 					layout = "flex",
-					flip_columns = 120,
 					scrollbar = "float",
 				},
 			},

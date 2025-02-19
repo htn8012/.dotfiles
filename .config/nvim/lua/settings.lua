@@ -12,9 +12,9 @@ vim.opt.splitbelow = true
 
 vim.opt.mouse = "a"
 vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.cursorline = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.tabstop = 2
 vim.opt.expandtab = true
@@ -27,6 +27,17 @@ vim.opt.undofile = true
 vim.opt.undolevels = 30000
 
 vim.opt.laststatus = 3
+local statusline = {
+	"%f",
+	"%r",
+	"%m",
+	"%=",
+	"%{&filetype}",
+	"%2p%%",
+	"%3l:%-2c",
+}
+
+vim.o.statusline = table.concat(statusline, "")
 
 vim.opt.scrolloff = 12
 vim.opt.sidescrolloff = 12
@@ -46,7 +57,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("highlight_on_yank", { clear = true }),
 	callback = function()
 		vim.highlight.on_yank({
-			higroup = "PmenuKindSel",
+			higroup = "PmenuThumb",
 			timeout = 150,
 			on_macro = true,
 		})
@@ -54,13 +65,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- automatic toggling
-vim.cmd([[
-  augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu		| set cul		| endif
-    autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | set nocul		| endif
-  augroup END
-]])
+-- vim.cmd([[
+--   augroup numbertoggle
+--     autocmd!
+--     autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu		| set cul		| endif
+--     autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | set nocul		| endif
+--   augroup END
+-- ]])
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",

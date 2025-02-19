@@ -45,3 +45,6 @@ vim.keymap.set("n", "<leader>p", '"+p', { desc = "paste after cursor from clipbo
 vim.keymap.set("n", "<leader>P", '"+P', { desc = "paste before cursor from clipboard" })
 
 vim.keymap.set({ "n", "v" }, "<C-a>", "<nop>")
+
+vim.keymap.set("n", "c.", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]], { desc = "search and replace word under cursor" })
+vim.keymap.set("n", "c>", [[:%s/\V<C-r><C-a>//g<Left><Left>]], { desc = "search and replace WORD under cursor" })

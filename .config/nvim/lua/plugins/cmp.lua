@@ -1,6 +1,6 @@
 return {
 	"hrsh7th/nvim-cmp",
-	enabled = true,
+	enabled = false,
 	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
 		{
@@ -99,6 +99,7 @@ return {
 				{ name = "path" },
 				-- { name = "vim-dadbod-completion" },
 			}),
+			---@diagnostic disable-next-line: missing-fields
 			formatting = {
 				format = lspkind.cmp_format({
 					mode = "symbol_text",

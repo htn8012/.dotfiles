@@ -15,7 +15,7 @@
     indicate_hidden = yes
     shrink = no
 		separator_height = 1
-    separator_color = "#6E2748"
+    separator_color = "#6A5A52"
     padding = 15
     horizontal_padding = 15
     frame_width = 1
@@ -56,31 +56,31 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#0f0b05" #bg
-    foreground = "#c3c2c0" #fg
-    highlight = "#c3c2c0" #fg
-    frame_color = "#6E2748" #fg-alt
+    background = "#0c0a07" #bg
+    foreground = "#dbcaac" #fg
+    highlight = "#dbcaac" #fg
+    frame_color = "#6A5A52" #fg-alt
     timeout = 5
 
 [urgency_normal]
-    background = "#0f0b05" #bg
-    foreground = "#c3c2c0" #fg
-    highlight = "#c3c2c0" #fg
-    frame_color = "#6E2748" #fg-alt
+    background = "#0c0a07" #bg
+    foreground = "#dbcaac" #fg
+    highlight = "#dbcaac" #fg
+    frame_color = "#6A5A52" #fg-alt
     timeout = 5
 
 [urgency_critical]
-    background = "#0f0b05" #bg
-    foreground = "#c3c2c0" #fg
+    background = "#0c0a07" #bg
+    foreground = "#dbcaac" #fg
     frame_color = "#ffa0ac"
     timeout = 1000
 
 [volume]
     appname = "Volume"
-    highlight = "#6E2748"
+    highlight = "#6A5A52"
 
 [backlight]
     appname = "Backlight"
-    highlight = "#6E2748"
+    highlight = "#6A5A52"
 
 # vim: ft=cfg

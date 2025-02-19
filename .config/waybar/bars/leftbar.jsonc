@@ -6,7 +6,6 @@
   "modules-left": [
     "hyprland/workspaces"
   ],
-  "modules-center": [],
   "modules-right": [
     "tray",
     "pulseaudio",
@@ -19,17 +18,18 @@
     "clock"
   ],
   "hyprland/window": {
-    // "format": "{title}",
-    "format": "{class}\t{title}",
-    "icon": false,
-    "max-length": 300,
-    "rotate": 90,
-    "tooltip": false
+    "format": "{title}\t{class}",
+    "separate-outputs": true
   },
   "hyprland/workspaces": {
-    "format": "{icon}",
     "disable-scroll": true,
-    "all-outputs": true
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2
+      ]
+    }
   },
   "tray": {
     "icon-size": 13,
@@ -81,46 +81,36 @@
     "tooltip-format": "{volume}% {icon} | {desc}",
     "format-muted": "󰖁",
     "format-icons": {
-      "headphones": "󰋌",
-      "handsfree": "󰋌",
-      "headset": "󰋌",
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
       "phone": "",
       "portable": "",
-      "car": " ",
+      "car": "",
       "default": [
-        "󰕿",
-        "󰖀",
-        "󰕾"
+        " ",
+        " ",
+        " "
       ]
     },
-    "on-click": "volume mute",
-    "on-click-right": "pavucontrol"
+    "on-click": "pavucontrol",
+    "on-click-right": "volume mute"
   },
   "backlight": {
-    "device": "intel_backlight",
     "format": "{icon}",
+    "tooltip-format": "{icon} {percent}%",
     "format-icons": [
       "",
       "",
       "",
       "",
-      "",
       "",
       "",
       "",
       "",
       "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "on-scroll-down": "brightnessctl s 5%-",
-    "on-scroll-up": "brightnessctl s +5%",
-    "tooltip": true,
-    "tooltip-format": "Brightness: {percent}% ",
-    "smooth-scrolling-threshold": 1
+      ""
+    ]
   },
   "custom/clipboard": {
     "format": "",

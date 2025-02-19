@@ -1,7 +1,7 @@
 return {
 	{
 		"echasnovski/mini.starter",
-		enabled = false,
+		enabled = true,
 		version = false,
 		opts = function()
 			local starter = require("mini.starter")
@@ -19,13 +19,6 @@ return {
 		config = function()
 			require("mini.icons").setup()
 			MiniIcons.mock_nvim_web_devicons()
-		end,
-	},
-	{
-		"echasnovski/mini.comment",
-		version = "*",
-		config = function()
-			require("mini.comment").setup()
 		end,
 	},
 }

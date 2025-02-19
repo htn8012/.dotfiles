@@ -35,7 +35,7 @@ wezterm.on("gui-startup", function()
 end)
 
 config.audible_bell = "Disabled"
-config.enable_wayland = true
+config.enable_wayland = false
 config.warn_about_missing_glyphs = true
 
 return config

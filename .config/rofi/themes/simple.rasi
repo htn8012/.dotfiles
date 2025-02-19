@@ -25,14 +25,17 @@ configuration {
   fg-alt: @foreground-alt;
   bg-alt: @background-alt;
 
+  border: @gray;
   background-color: @bg;
   text-color: @fg-alt;
 }
 
 window {
+  height: 28em;
+  width: 38em;
   border: 1px;
-  border-radius: 0;
-  border-color: @gray;
+  border-radius: 0px;
+  border-color: @border;
   padding: 6px;
   transparency: "real";
 }
@@ -52,7 +55,7 @@ listview {
 
 scrollbar {
   background-color: @bg;
-  handle-color: @gray;
+  handle-color: @bg-alt;
   handle-width: 8px ;
   margin: 0 0 0 8px;
 }

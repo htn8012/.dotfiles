@@ -19,9 +19,9 @@ return {
 			fzf_colors = {
 				true,
 				["fg"] = { "fg", "CursorLine" },
-				["fg+"] = { "fg", "Normal", "underline" },
+				["fg+"] = { "fg", "PmenuSel" },
 				["bg"] = { "bg", "Normal" },
-				["bg+"] = { "bg", { "CursorLine", "Normal" } },
+				["bg+"] = { "bg", { "PmenuSel", "Normal" } },
 				["gutter"] = "-1",
 			},
 			keymap = {

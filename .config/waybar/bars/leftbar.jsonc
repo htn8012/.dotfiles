@@ -23,13 +23,7 @@
   },
   "hyprland/workspaces": {
     "disable-scroll": true,
-    "all-outputs": true,
-    "persistent-workspaces": {
-      "*": [
-        1,
-        2
-      ]
-    }
+    "all-outputs": true
   },
   "tray": {
     "icon-size": 13,

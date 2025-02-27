@@ -27,30 +27,20 @@ vim.opt.undofile = true
 vim.opt.undolevels = 30000
 
 vim.opt.laststatus = 3
-local statusline = {
-	"%f",
-	"%r",
-	"%m",
-	"%=",
-	"%{&filetype}",
-	"%2p%%",
-	"%3l:%-2c",
-}
-
-vim.o.statusline = table.concat(statusline, "")
+-- local statusline = {
+-- 	"%f",
+-- 	"%r",
+-- 	"%m",
+-- 	"%=",
+-- 	"%{&filetype}",
+-- 	"%2p%%",
+-- 	"%3l:%-2c",
+-- }
+--
+-- vim.o.statusline = table.concat(statusline, "")
 
 vim.opt.scrolloff = 12
 vim.opt.sidescrolloff = 12
-
--- check if we need to reload the file when it changed
-vim.api.nvim_create_autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
-	group = vim.api.nvim_create_augroup("Checktime", { clear = true }),
-	callback = function()
-		if vim.o.buftype ~= "nofile" then
-			vim.cmd("checktime")
-		end
-	end,
-})
 
 -- highlight briefly on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -62,23 +52,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 			on_macro = true,
 		})
 	end,
-})
-
--- automatic toggling
--- vim.cmd([[
---   augroup numbertoggle
---     autocmd!
---     autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu		| set cul		| endif
---     autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | set nocul		| endif
---   augroup END
--- ]])
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "*",
-	callback = function()
-		-- Disable comment on new line
-		vim.opt.formatoptions:remove({ "c", "r", "o" })
-	end,
-	group = vim.api.nvim_create_augroup("General", { clear = true }),
-	desc = "Disable New Line Comment",
 })

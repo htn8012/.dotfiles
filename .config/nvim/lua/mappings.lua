@@ -7,7 +7,7 @@ vim.keymap.set({ "n", "x" }, "H", "^")
 vim.keymap.set({ "n", "x" }, "L", "g_")
 
 -- better
-vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit" })
 vim.keymap.set("n", "<esc>", ":nohlsearch<cr>", { silent = true })
 
@@ -22,6 +22,10 @@ vim.keymap.set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "prev se
 -- move lines
 vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv")
+
+--quickfix
+vim.keymap.set("n", "<M-j>", "<cmd>cnext<cr>")
+vim.keymap.set("n", "<M-k>", "<cmd>cprev<cr>")
 
 -- keep visual selection when indenting
 vim.keymap.set("x", ">", ">gv")
@@ -43,8 +47,3 @@ vim.keymap.set("n", "<leader>C", '"_C', { desc = "change until eol without yanki
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "yank to clipboard" })
 vim.keymap.set("n", "<leader>p", '"+p', { desc = "paste after cursor from clipboard" })
 vim.keymap.set("n", "<leader>P", '"+P', { desc = "paste before cursor from clipboard" })
-
-vim.keymap.set({ "n", "v" }, "<C-a>", "<nop>")
-
-vim.keymap.set("n", "c.", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]], { desc = "search and replace word under cursor" })
-vim.keymap.set("n", "c>", [[:%s/\V<C-r><C-a>//g<Left><Left>]], { desc = "search and replace WORD under cursor" })

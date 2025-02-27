@@ -1,0 +1,10 @@
+#!/bin/bash
+
+STATUS=$(dunstctl is-paused)
+
+# Check if the cleaned-up output is "true" (Muted)
+if [[ "$STATUS" == "true" ]]; then
+  echo "  " # Muted (DND On)
+else
+  echo " 󰂚 " # Active (DND Off)
+fi

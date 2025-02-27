@@ -8,7 +8,7 @@ return {
 
 	cmd = "Neotree",
 	keys = {
-		{ "<leader>e", ":Neotree left reveal<CR>", silent = true, desc = "Neotree" },
+		{ "<leader>e", ":Neotree float reveal<CR>", silent = true, desc = "Neotree" },
 	},
 	deactivate = function()
 		vim.cmd([[Neotree close]])
@@ -57,8 +57,15 @@ return {
 			mappings = {
 				["l"] = "open",
 				["h"] = "close_node",
-				["f"] = "none",
-				["o"] = "none",
+				["f"] = "noop",
+				["o"] = "noop",
+				["a"] = "noop",
+				["r"] = "noop",
+				["c"] = "noop",
+				["x"] = "noop",
+				["b"] = "noop",
+				["y"] = "noop",
+				["w"] = "noop",
 				["Y"] = {
 					function(state)
 						local node = state.tree:get_node()

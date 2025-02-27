@@ -1,6 +1,7 @@
 return {
 	"folke/snacks.nvim",
 	lazy = false,
+	enabled = true,
 	config = function()
 		local snacks = require("snacks")
 		snacks.setup({
@@ -18,6 +19,7 @@ return {
 			scroll = {
 				enabled = true,
 			},
+
 			statuscolumn = {
 				enabled = true,
 			},

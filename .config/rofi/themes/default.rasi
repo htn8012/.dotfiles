@@ -72,3 +72,4 @@ element-text selected, element-icon selected {
   background-color: @bg-alt;
   text-color: @bg;
 }
+

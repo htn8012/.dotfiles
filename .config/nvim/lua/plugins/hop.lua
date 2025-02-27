@@ -1,8 +1,9 @@
 return {
 	"aznhe21/hop.nvim",
 	branch = "fix-some-bugs", -- optional but strongly recommended
+	enabled = true,
 	keys = {
-		{ "<leader>w", ":HopWord<cr>", desc = "Hop Word" },
+		{ "<leader>s", ":HopWord<cr>", desc = "Hop Word" },
 		{ "<leader>j", ":HopLineStartAC<cr>", desc = "Hop Line AC" },
 		{ "<leader>k", ":HopLineStartBC<cr>", desc = "Hop Line BC" },
 	},

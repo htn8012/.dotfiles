@@ -57,6 +57,7 @@ local function apply_colors()
 	hl("Pmenu", { fg = light_bg })
 	hl("PmenuThumb", { bg = light_bg })
 	hl("PmenuSel", { bg = vim.g.terminal_color_8, fg = vim.g.terminal_color_0, bold = false })
+	link("QuickFixLine", "PmenuSel")
 
 	hl("NormalFloat", { bg = nil })
 	hl("FloatBorder", { bg = nil })
@@ -79,6 +80,7 @@ local function apply_colors()
 	link("LineNr", "Comment")
 	link("Visual", "PmenuSel")
 	link("FzfLuaBorder", "WinSeparator")
+	link("NeoTreeFloatBorder", "WinSeparator")
 	link("Visual", "PmenuSel")
 end
 

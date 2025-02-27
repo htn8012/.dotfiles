@@ -26,8 +26,8 @@ return {
 			},
 			keymap = {
 				builtin = {
-					["<c-d>"] = "preview-page-down",
 					["<c-u>"] = "preview-page-up",
+					["<c-d>"] = "preview-page-down",
 				},
 				fzf = {
 					["ctrl-e"] = "select-all+accept",
@@ -64,12 +64,14 @@ return {
 				actions = {
 					["alt-i"] = { actions.toggle_ignore },
 					["alt-h"] = { actions.toggle_hidden },
+					["ctrl-q"] = { fn = require("fzf-lua").actions.file_sel_to_qf, prefix = "select-all" },
 				},
 			},
 			grep = {
 				actions = {
 					["alt-i"] = { actions.toggle_ignore },
 					["alt-h"] = { actions.toggle_hidden },
+					["ctrl-q"] = { fn = require("fzf-lua").actions.file_sel_to_qf, prefix = "select-all" },
 				},
 			},
 			lsp = {

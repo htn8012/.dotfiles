@@ -5,7 +5,7 @@ cat ~/.cache/wal/dunstrc >~/.config/dunst/dunstrc
 cat ~/.cache/wal/colors-hyprland.conf >~/.config/hypr/modules/colors.conf
 cat ~/.cache/wal/colors-waybar.css >~/.config/waybar/colors.css
 cat ~/.cache/wal/ghostty >~/.config/ghostty/config
-cat ~/.cache/wal/colors-nvim.lua >~/.config/nvim/colors/base16-wal.lua
+# cat ~/.cache/wal/colors-nvim.lua >~/.config/nvim/colors/base16-wal.lua
 
 pkill waybar
 waybar &

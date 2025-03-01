@@ -81,6 +81,9 @@ yay -S xcursor-breeze
 ls -al ~/.ssh
 ssh-keygen -t ed25519 -C "your_email@example.com"
 cat ~/.ssh/id_ed25519.pub | wl-copy
+
+git config --global user.name "Example Name"
+git config --global user.email example@example.com
 ```
 
 - Add SSH keys [Github](https://github.com/settings/keys)

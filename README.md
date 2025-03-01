@@ -57,14 +57,6 @@ yay -S oh-my-posh
 sudo pacman -S intel-media-driver mesa xf86-video-amdgpu xf86-video-vmware libva-intel-driver vulkan-intel xf86-video-ati xorg-server libva-mesa-driver vulkan-radeon xf86-video-nouveau xorg-xinit
 ```
 
-### node version manager
-
-- Install nvm [nvm-sh/nvm](https://github.com/nvm-sh/nvm)
-
-```sh
-command -v nvm
-nvm install node
-```
 
 ### hyprland
 
@@ -77,7 +69,7 @@ sudo pacman -S hyprpolkitagent
 
 sudo pacman -S qt6ct kvantum nwg-look nwg-displays dconf-editor
 # sudo pacman -S gnome-themes-extra gtk-engine-murrine sassc
-sudo pacman -S adw-gtk-theme arc-icon-theme
+sudo pacman -S adw-gtk-theme arc-icon-theme xcursor-vanilla-dmz
 yay -S xcursor-breeze
 ```
 
@@ -100,6 +92,15 @@ cd ~/.dotfiles
 stow . --adopt -nv
 stow . --adopt -v
 git reset --hard HEAD
+```
+
+### node version manager
+
+- Install nvm [nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+
+```sh
+command -v nvm
+nvm install node
 ```
 
 ### tmux
